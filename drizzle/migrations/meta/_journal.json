@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1793670292902,
+      "tag": "0000_admin_panel",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1793670308950,
+      "tag": "0001_images_read",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1794968076528,
+      "tag": "0002_product_categories",
+      "breakpoints": true
+    }
+  ]
+}

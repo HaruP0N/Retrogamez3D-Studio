@@ -1,0 +1,3 @@
+ALTER TABLE public.products ADD COLUMN category text NOT NULL DEFAULT 'decoracion' CHECK (category IN ('decoracion', 'figuras', 'funcionales'));
+ALTER TABLE public.products ADD COLUMN is_category boolean NOT NULL DEFAULT false;
+UPDATE public.products SET category = CASE name WHEN 'Figuras y coleccionables' THEN 'figuras' WHEN 'Piezas funcionales' THEN 'funcionales' ELSE 'decoracion' END, is_category = true WHERE (id = '2e577a54-44d0-4fe7-b101-ed828076b7ef' AND name = 'Decoración') OR (id = 'f86c985c-bba1-4cea-9b33-81ee0a6fe468' AND name = 'Figuras y coleccionables') OR (id = '8188135e-cc3d-4102-8fbf-f77e437f517e' AND name = 'Piezas funcionales');

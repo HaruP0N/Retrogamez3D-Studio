@@ -1,0 +1,14 @@
+node_modules
+dist
+dist-ssr
+.output
+.tanstack
+.nitro
+.vercel
+.wrangler
+.env
+.env.*
+!.env.example
+*.log
+*.tsbuildinfo
+.DS_Store

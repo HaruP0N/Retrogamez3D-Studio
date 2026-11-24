@@ -1,0 +1,1 @@
+create policy "anyone reads site images" on storage.objects for select to anon, authenticated using (bucket_id = 'images');
