@@ -82,7 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "RetroGamez3D — Impresión 3D" },
+      { title: "Capa3D — Impresión 3D" },
       { name: "description", content: "Impresión 3D a pedido y productos impresos." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -151,6 +151,12 @@ function RootComponent() {
               className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground"
               activeProps={{ className: "text-primary" }}
               activeOptions={{ exact: true }}
+              onClick={(e) => {
+                if (window.location.pathname === "/") {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
             >
               <House size={14} strokeWidth={2.5} aria-hidden="true" />
               Inicio
@@ -199,13 +205,6 @@ function RootComponent() {
               <Instagram size={13} strokeWidth={2.2} />
               <span>@retrogamez3d</span>
             </a>
-            <Link
-              to="/"
-              className="flex items-center gap-1.5 hover:text-primary"
-            >
-              <House size={13} strokeWidth={2.5} aria-hidden="true" />
-              Volver al inicio
-            </Link>
             <Link to="/admin" className="flex items-center gap-1.5 hover:text-primary">
               <Lock size={12} strokeWidth={2.5} aria-hidden="true" />
               Admin
